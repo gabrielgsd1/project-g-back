@@ -1,9 +1,8 @@
 import { Request } from 'express';
 import { Session } from 'express-session';
-import { User } from 'src/models/user/user.entity';
 
 type UserSession = Session & {
-  user: User;
+  user: any;
 };
 
 type RequestCustom = Request & {
