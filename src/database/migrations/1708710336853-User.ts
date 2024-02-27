@@ -23,11 +23,6 @@ export class User1708710336853 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'salt',
-            type: 'varchar',
-            isNullable: false,
-          },
-          {
             name: 'is_verified',
             type: 'boolean',
             default: false,
@@ -36,6 +31,17 @@ export class User1708710336853 implements MigrationInterface {
             name: 'birthdate',
             type: 'date',
             isNullable: false,
+          },
+          {
+            name: 'username',
+            isNullable: true,
+            type: 'varchar',
+            isUnique: true,
+          },
+          {
+            name: 'email',
+            isNullable: false,
+            type: 'varchar',
           },
           {
             name: 'created_at',
