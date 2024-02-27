@@ -10,21 +10,17 @@ export class ModelWithTimeFields {
   @CreateDateColumn()
   created_at: string;
 
-  @UpdateDateColumn()
-  @Column({ type: 'date', nullable: true })
+  @UpdateDateColumn({ nullable: true })
   updated_at: string;
 
-  @DeleteDateColumn()
-  @Column({ type: 'date', nullable: true })
+  @DeleteDateColumn({ nullable: true })
   deleted_at: string;
 }
 
 export class ModelWithCreateAndDelete {
-  @Column({ type: 'date' })
   @CreateDateColumn()
   created_at: string;
 
-  @DeleteDateColumn()
-  @Column({ type: 'date' })
+  @DeleteDateColumn({ nullable: true })
   deleted_at: string;
 }
