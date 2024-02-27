@@ -14,13 +14,16 @@ export class User extends ModelWithTimeFields {
   password: string;
 
   @Column({ type: 'varchar' })
-  salt: string;
+  email: string;
 
   @Column({ type: 'boolean' })
   is_verified: boolean;
 
   @Column({ type: 'date' })
   birthdate: string;
+
+  @Column({ type: 'varchar' })
+  username: string;
 
   @OneToMany(() => Post, (post) => post.user)
   posts: Post[];

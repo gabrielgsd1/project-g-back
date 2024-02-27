@@ -15,7 +15,6 @@ const configObj = {
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   logging: true,
-  synchronize: true,
   type: 'postgres' as const,
 };
 
