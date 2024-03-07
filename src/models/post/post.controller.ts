@@ -14,7 +14,7 @@ export class PostController {
     return await this.postService.get();
   }
 
-  @Get('/user')
+  @Get()
   async getUserPosts(@GetUser() user: User) {
     return await this.postService.getUserPosts(user);
   }

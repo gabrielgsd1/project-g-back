@@ -10,7 +10,7 @@ export class User extends ModelWithTimeFields {
   @Column({ type: 'varchar' })
   name: string;
 
-  @Column({ type: 'varchar' })
+  @Column({ type: 'varchar',  })
   password: string;
 
   @Column({ type: 'varchar' })
