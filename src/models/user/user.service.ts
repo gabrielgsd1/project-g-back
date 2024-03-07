@@ -10,4 +10,8 @@ export class UserService {
   getAllUsers() {
     return this.userRepo.find();
   }
+
+  userExists(id: string) {
+    return this.userRepo.existsBy({ user_id: id });
+  }
 }
